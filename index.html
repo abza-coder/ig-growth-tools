@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IG Growth Tools 🚀</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #f43f5e;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  background: #f43f5e;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e11d48;
+}
+
+.result {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #38bdf8;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🚀 IG Growth Tools</h1>
+<p>Boost your Instagram easily 🔥</p>
+
+<div class="container">
+
+<!-- Caption Generator -->
+<div class="card">
+<h2>✍️ Caption Generator</h2>
+<input type="text" id="captionInput" placeholder="Enter topic (fitness, money...)">
+<button onclick="generateCaption()">Generate Caption</button>
+<p class="result" id="captionResult"></p>
+</div>
+
+<!-- Bio Generator -->
+<div class="card">
+<h2>😎 Bio Generator</h2>
+<input type="text" id="bioInput" placeholder="Enter your name">
+<button onclick="generateBio()">Generate Bio</button>
+<p class="result" id="bioResult"></p>
+</div>
+
+<!-- Hashtag Generator -->
+<div class="card">
+<h2>#️⃣ Hashtag Generator</h2>
+<input type="text" id="hashtagInput" placeholder="Enter topic">
+<button onclick="generateHashtags()">Generate Hashtags</button>
+<p class="result" id="hashtagResult"></p>
+</div>
+
+</div>
+
+<script>
+function generateCaption() {
+  let topic = document.getElementById("captionInput").value;
+  let captions = [
+    `No excuses. Just ${topic} 💪🔥`,
+    `${topic} is the only way forward 🚀`,
+    `Stay focused on ${topic} and win 🏆`,
+    `${topic} mindset = success 💯`
+  ];
+  let random = captions[Math.floor(Math.random() * captions.length)];
+  document.getElementById("captionResult").innerText = random;
+}
+
+function generateBio() {
+  let name = document.getElementById("bioInput").value;
+  let bios = [
+    `${name} | Dream big 🚀`,
+    `${name} | Hustle everyday 💼`,
+    `${name} | Building my future 🔥`,
+    `${name} | Focused & unstoppable 💯`
+  ];
+  let random = bios[Math.floor(Math.random() * bios.length)];
+  document.getElementById("bioResult").innerText = random;
+}
+
+function generateHashtags() {
+  let topic = document.getElementById("hashtagInput").value;
+  let hashtags = `#${topic} #${topic}life #${topic}motivation #success #viral #explorepage`;
+  document.getElementById("hashtagResult").innerText = hashtags;
+}
+</script>
+
+</body>
+</html>
